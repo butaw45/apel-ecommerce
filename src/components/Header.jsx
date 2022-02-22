@@ -1,6 +1,6 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
-
+import Login from './buttons/Login'
 
 const Header = () => {
     return (
@@ -28,6 +28,7 @@ const Header = () => {
                         </ul>
                     </div>
                     <Link className="navbar-brand mx-auto fw-bold" to="/">APEL STORE</Link>
+                    <Login />
                 </div>
             </nav>
         </>
