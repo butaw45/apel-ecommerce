@@ -7,27 +7,27 @@ const Login = () => {
     return (
         <>
             {/* <!-- Button trigger modal --> */}
-            <button type="button" className="btn btn-outline-primary mx-2" data-bs-toggle="modal" data-bs-target="#exampleModal">
+            <button type="button" className="btn btn-outline-primary mx-2" data-bs-toggle="modal" data-bs-target="#loginModal">
                 <FontAwesomeIcon icon={faArrowRightToBracket} className='me-2' />
                 Login
             </button>
 
             {/* <!-- Modal --> */}
-            <div className="modal fade" id="exampleModal" tabIndex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div className="modal fade" id="loginModal" tabIndex="-1" aria-labelledby="loginModal" aria-hidden="true">
                 <div className="modal-dialog">
                     <div className="modal-content">
                         <div className="modal-header">
-                            <h5 className="modal-title" id="exampleModalLabel">Login</h5>
+                            <h5 className="modal-title" id="loginModal">Login</h5>
                             <button type="button" className="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                         </div>
                         <div className="modal-body">
                             <button className="btn btn-primary w-100 mb-2">
                                 <FontAwesomeIcon icon={faGoogle} className='me-2' />
-                                Sign Up with Google
+                                Sign In with Google
                             </button>
                             <button className="btn btn-primary w-100 mb-2">
                                 <FontAwesomeIcon icon={faDiscord} className='me-2' />
-                                Sign Up with Discord
+                                Sign In with Discord
                             </button>
                             <form>
                                 <div className="mb-3">
