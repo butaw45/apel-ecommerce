@@ -1,5 +1,6 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
+import CartBtn from './buttons/CartBtn'
 import Login from './buttons/Login'
 import SignUp from './buttons/SignUp'
 
@@ -27,10 +28,11 @@ const Header = () => {
                                 <Link className="nav-link" to="/contact">Contact</Link>
                             </li>
                         </ul>
+                        <Link className="navbar-brand mx-auto fw-bold" to="/">APEL STORE</Link>
+                        <Login />
+                        <SignUp />
+                        <CartBtn />
                     </div>
-                    <Link className="navbar-brand mx-auto fw-bold" to="/">APEL STORE</Link>
-                    <Login />
-                    <SignUp />
                 </div>
             </nav>
         </>

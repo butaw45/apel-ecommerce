@@ -1,8 +1,7 @@
 import React from 'react'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faArrowRightToBracket, faUserPlus } from '@fortawesome/free-solid-svg-icons'
+import { faUserPlus } from '@fortawesome/free-solid-svg-icons'
 import { faDiscord, faGoogle } from '@fortawesome/free-brands-svg-icons'
-import { faUser } from '@fortawesome/free-regular-svg-icons'
 
 const SignUp = () => {
   return (
@@ -40,8 +39,8 @@ const SignUp = () => {
                   <input type="email" className="form-control" id="email" aria-describedby="emailHelp" />
                 </div>
                 <div className="mb-3">
-                  <label htmlFor="exampleInputPassword1" className="form-label">Password</label>
-                  <input type="password" className="form-control" id="exampleInputPassword1" />
+                  <label htmlFor="passwordsignup" className="form-label">Password</label>
+                  <input type="password" className="form-control" id="passwordsignup" />
                 </div>
                 <div className="mb-3 form-check">
                   <input type="checkbox" className="form-check-input" id="exampleCheck1" />
