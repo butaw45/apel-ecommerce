@@ -2,13 +2,15 @@ import React from 'react'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faShoppingCart } from '@fortawesome/free-solid-svg-icons'
 import { Link } from 'react-router-dom'
+import { useSelector } from 'react-redux'
 
 const CartBtn = () => {
+    const state = useSelector((state) => state.addItem)
     return (
         <>
             <Link to='/cart' className="btn btn-outline-primary mx-2">
                 <FontAwesomeIcon icon={faShoppingCart} className='me-2' />
-                Cart(0)
+                Cart ({state.length})
             </Link>
         </>
     )
