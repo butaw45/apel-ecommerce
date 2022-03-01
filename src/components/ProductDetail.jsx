@@ -1,12 +1,27 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { useParams } from 'react-router-dom'
 import Data from '../Data'
+import { useDispatch } from 'react-redux'
+import { addItem, delItem } from '../redux/action/index'
 
 const ProductDetail = () => {
+    const [cartBtn, setCartBtn] = useState("Add to Cart")
     const prodid = useParams()
     const proDetail = Data.filter(x => x.id == prodid.id)
     const product = proDetail[0]
     console.log(product)
+
+    const dispatch = useDispatch()
+
+    const handleCart = (product) => {
+        if (cartBtn === "Add to Cart") {
+            dispatch(addItem(product))
+            setCartBtn("Remove from Cart")
+        } else {
+            dispatch(delItem(product))
+            setCartBtn("Add to Cart")
+        }
+    }
 
     return (
         <>
@@ -20,7 +35,7 @@ const ProductDetail = () => {
                         <hr />
                         <h2 className='my-3'>Rp. {product.price}</h2>
                         <p>{product.desc}</p>
-                        <button className='btn btn-outline-primary'>Add to Cart</button>
+                        <button onClick={() => handleCart(product)} className='btn btn-outline-primary'>{cartBtn}</button>
                     </div>
                 </div>
             </div>
