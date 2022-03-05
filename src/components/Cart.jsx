@@ -45,8 +45,8 @@ const Cart = () => {
     const button = () => {
         return (
             <div className="container">
-                <div className="row">
-                    <Link to='/checkout' className='btn btn-outline-primary mb-5 w-25'>Lanjutkan ke Pembayaran</Link>
+                <div className="row justify-content-center">
+                    <Link to='/checkout' className='btn btn-outline-primary mb-5 w-25 '>Lanjutkan ke Pembayaran</Link>
                 </div>
             </div>
         )
